@@ -1,13 +1,13 @@
 def removeDuplicates(string)
-  return if string == nil
+  return unless string
+  current = string[0]
   for i in (0...string.length)
-    current = string[i]
     j = i + 1
     while j < string.length
       if current == string[j]
         string.slice!(j)
       else
-        j = j + 1
+        j += 1
       end
     end
     current = string[i+1]
